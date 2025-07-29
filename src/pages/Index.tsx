@@ -33,7 +33,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-rose-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
@@ -42,13 +42,13 @@ const Index = () => {
         />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <div className="animate-fade-in">
-            <h1 className="text-6xl md:text-8xl font-light text-wedding-rose mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+            <h1 className="text-6xl md:text-8xl font-light text-wedding-black mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
               Анна & Михаил
             </h1>
             <div className="flex items-center justify-center gap-4 mb-8">
-              <div className="h-px bg-wedding-rose w-16"></div>
-              <Icon name="Heart" className="text-wedding-rose" size={24} />
-              <div className="h-px bg-wedding-rose w-16"></div>
+              <div className="h-px bg-wedding-black w-16"></div>
+              <Icon name="Heart" className="text-wedding-black" size={24} />
+              <div className="h-px bg-wedding-black w-16"></div>
             </div>
             <p className="text-2xl md:text-3xl text-gray-600 mb-6" style={{ fontFamily: 'Open Sans, sans-serif' }}>
               {weddingDate}
@@ -57,7 +57,7 @@ const Index = () => {
               Приглашаем вас разделить с нами радость нашего особенного дня
             </p>
             <Button 
-              className="bg-wedding-rose hover:bg-wedding-rose/90 text-white px-8 py-3 text-lg rounded-full"
+              className="bg-wedding-black hover:bg-wedding-black/90 text-white px-8 py-3 text-lg rounded-full"
               onClick={() => document.getElementById('rsvp')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Подтвердить участие
@@ -69,15 +69,15 @@ const Index = () => {
       <div className="max-w-6xl mx-auto px-4 py-16 space-y-16">
         {/* Venue Information */}
         <section className="text-center">
-          <h2 className="text-4xl font-light text-wedding-rose mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="text-4xl font-light text-wedding-black mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
             Место проведения
           </h2>
-          <Card className="bg-white/80 backdrop-blur-sm border-wedding-lavender/30 shadow-xl">
+          <Card className="bg-white/80 backdrop-blur-sm border-gray-300/30 shadow-xl">
             <CardContent className="p-8">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="space-y-4">
                   <div className="flex items-center justify-center md:justify-start gap-3">
-                    <Icon name="MapPin" className="text-wedding-rose" size={24} />
+                    <Icon name="MapPin" className="text-wedding-black" size={24} />
                     <h3 className="text-2xl font-medium" style={{ fontFamily: 'Cormorant, serif' }}>
                       {venue}
                     </h3>
@@ -87,13 +87,13 @@ const Index = () => {
                     деревня Путилково, ул. Садовая, 5
                   </p>
                   <div className="flex items-center justify-center md:justify-start gap-3">
-                    <Icon name="Clock" className="text-wedding-rose" size={20} />
+                    <Icon name="Clock" className="text-wedding-black" size={20} />
                     <span className="text-lg">{time}</span>
                   </div>
                 </div>
-                <div className="bg-wedding-lavender/20 p-6 rounded-lg">
+                <div className="bg-gray-100 p-6 rounded-lg">
                   <div className="text-center">
-                    <Icon name="Car" className="text-wedding-rose mx-auto mb-2" size={32} />
+                    <Icon name="Car" className="text-wedding-black mx-auto mb-2" size={32} />
                     <p className="text-sm text-gray-600">
                       Организован трансфер от метро Мякинино<br />
                       Отправление в 14:00
@@ -107,10 +107,10 @@ const Index = () => {
 
         {/* RSVP Section */}
         <section id="rsvp" className="text-center">
-          <h2 className="text-4xl font-light text-wedding-rose mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="text-4xl font-light text-wedding-black mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
             Подтверждение участия
           </h2>
-          <Card className="bg-white/80 backdrop-blur-sm border-wedding-lavender/30 shadow-xl max-w-2xl mx-auto">
+          <Card className="bg-white/80 backdrop-blur-sm border-gray-300/30 shadow-xl max-w-2xl mx-auto">
             <CardContent className="p-8">
               <div className="space-y-6">
                 <div>
@@ -121,7 +121,7 @@ const Index = () => {
                     value={guestName}
                     onChange={(e) => setGuestName(e.target.value)}
                     placeholder="Введите ваше имя"
-                    className="border-wedding-lavender/50"
+                    className="border-gray-300/50"
                   />
                 </div>
                 
@@ -133,7 +133,7 @@ const Index = () => {
                     <Button
                       variant={attending === true ? "default" : "outline"}
                       onClick={() => setAttending(true)}
-                      className={attending === true ? "bg-wedding-rose hover:bg-wedding-rose/90" : "border-wedding-lavender"}
+                      className={attending === true ? "bg-wedding-black hover:bg-wedding-black/90" : "border-gray-300"}
                     >
                       <Icon name="Check" size={16} className="mr-2" />
                       Да, буду
@@ -141,7 +141,7 @@ const Index = () => {
                     <Button
                       variant={attending === false ? "default" : "outline"}
                       onClick={() => setAttending(false)}
-                      className={attending === false ? "bg-gray-500 hover:bg-gray-600" : "border-wedding-lavender"}
+                      className={attending === false ? "bg-gray-500 hover:bg-gray-600" : "border-gray-300"}
                     >
                       <Icon name="X" size={16} className="mr-2" />
                       Не смогу
@@ -157,12 +157,12 @@ const Index = () => {
                     value={guestMessage}
                     onChange={(e) => setGuestMessage(e.target.value)}
                     placeholder="Ваши теплые пожелания..."
-                    className="border-wedding-lavender/50"
+                    className="border-gray-300/50"
                     rows={3}
                   />
                 </div>
 
-                <Button className="w-full bg-wedding-rose hover:bg-wedding-rose/90 text-white">
+                <Button className="w-full bg-wedding-black hover:bg-wedding-black/90 text-white">
                   Отправить ответ
                 </Button>
               </div>
@@ -172,14 +172,14 @@ const Index = () => {
 
         {/* Dress Code */}
         <section className="text-center">
-          <h2 className="text-4xl font-light text-wedding-rose mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="text-4xl font-light text-wedding-black mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
             Дресс-код
           </h2>
-          <Card className="bg-white/80 backdrop-blur-sm border-wedding-lavender/30 shadow-xl">
+          <Card className="bg-white/80 backdrop-blur-sm border-gray-300/30 shadow-xl">
             <CardContent className="p-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="text-center">
-                  <Icon name="Shirt" className="text-wedding-rose mx-auto mb-4" size={48} />
+                  <Icon name="Shirt" className="text-wedding-black mx-auto mb-4" size={48} />
                   <h3 className="text-2xl font-medium mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
                     Для мужчин
                   </h3>
@@ -190,7 +190,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <Icon name="Sparkles" className="text-wedding-rose mx-auto mb-4" size={48} />
+                  <Icon name="Sparkles" className="text-wedding-black mx-auto mb-4" size={48} />
                   <h3 className="text-2xl font-medium mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
                     Для женщин
                   </h3>
@@ -207,15 +207,15 @@ const Index = () => {
 
         {/* Schedule */}
         <section className="text-center">
-          <h2 className="text-4xl font-light text-wedding-rose mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="text-4xl font-light text-wedding-black mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
             Программа торжества
           </h2>
-          <Card className="bg-white/80 backdrop-blur-sm border-wedding-lavender/30 shadow-xl">
+          <Card className="bg-white/80 backdrop-blur-sm border-gray-300/30 shadow-xl">
             <CardContent className="p-8">
               <div className="space-y-4">
                 {schedule.map((item, index) => (
-                  <div key={index} className="flex items-center gap-6 p-4 rounded-lg bg-wedding-lavender/10">
-                    <Badge variant="outline" className="text-wedding-rose border-wedding-rose min-w-[80px]">
+                  <div key={index} className="flex items-center gap-6 p-4 rounded-lg bg-gray-50">
+                    <Badge variant="outline" className="text-wedding-black border-wedding-rose min-w-[80px]">
                       {item.time}
                     </Badge>
                     <span className="text-lg">{item.event}</span>
@@ -228,18 +228,18 @@ const Index = () => {
 
         {/* Gift Registry */}
         <section className="text-center">
-          <h2 className="text-4xl font-light text-wedding-rose mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="text-4xl font-light text-wedding-black mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
             Список желаемых подарков
           </h2>
-          <Card className="bg-white/80 backdrop-blur-sm border-wedding-lavender/30 shadow-xl">
+          <Card className="bg-white/80 backdrop-blur-sm border-gray-300/30 shadow-xl">
             <CardContent className="p-8">
               <p className="text-gray-600 mb-6">
                 Ваше присутствие - лучший подарок для нас! Но если вы хотите нас порадовать:
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 {gifts.map((gift, index) => (
-                  <div key={index} className="flex items-center gap-3 p-4 rounded-lg bg-wedding-lavender/10">
-                    <Icon name="Gift" className="text-wedding-rose" size={20} />
+                  <div key={index} className="flex items-center gap-3 p-4 rounded-lg bg-gray-50">
+                    <Icon name="Gift" className="text-wedding-black" size={20} />
                     <span>{gift}</span>
                   </div>
                 ))}
@@ -250,10 +250,10 @@ const Index = () => {
 
         {/* Contact Information */}
         <section className="text-center">
-          <h2 className="text-4xl font-light text-wedding-rose mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="text-4xl font-light text-wedding-black mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
             Контакты
           </h2>
-          <Card className="bg-white/80 backdrop-blur-sm border-wedding-lavender/30 shadow-xl">
+          <Card className="bg-white/80 backdrop-blur-sm border-gray-300/30 shadow-xl">
             <CardContent className="p-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="text-center">
@@ -262,11 +262,11 @@ const Index = () => {
                   </h3>
                   <div className="space-y-2">
                     <div className="flex items-center justify-center gap-2">
-                      <Icon name="Phone" className="text-wedding-rose" size={18} />
+                      <Icon name="Phone" className="text-wedding-black" size={18} />
                       <span>+7 (999) 123-45-67</span>
                     </div>
                     <div className="flex items-center justify-center gap-2">
-                      <Icon name="Mail" className="text-wedding-rose" size={18} />
+                      <Icon name="Mail" className="text-wedding-black" size={18} />
                       <span>anna.wedding2024@email.com</span>
                     </div>
                   </div>
@@ -277,7 +277,7 @@ const Index = () => {
                   </h3>
                   <div className="space-y-2">
                     <div className="flex items-center justify-center gap-2">
-                      <Icon name="Phone" className="text-wedding-rose" size={18} />
+                      <Icon name="Phone" className="text-wedding-black" size={18} />
                       <span>+7 (999) 765-43-21</span>
                     </div>
                     <p className="text-sm text-gray-600">Елена Смирнова</p>
@@ -290,12 +290,12 @@ const Index = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-wedding-rose/10 py-8 text-center">
+      <footer className="bg-wedding-black/10 py-8 text-center">
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex items-center justify-center gap-4 mb-4">
-            <div className="h-px bg-wedding-rose w-16"></div>
-            <Icon name="Heart" className="text-wedding-rose" size={24} />
-            <div className="h-px bg-wedding-rose w-16"></div>
+            <div className="h-px bg-wedding-black w-16"></div>
+            <Icon name="Heart" className="text-wedding-black" size={24} />
+            <div className="h-px bg-wedding-black w-16"></div>
           </div>
           <p className="text-lg text-gray-600" style={{ fontFamily: 'Cormorant, serif' }}>
             С любовью, Анна и Михаил
