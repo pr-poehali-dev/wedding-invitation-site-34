@@ -32,6 +32,10 @@ export default {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
+				'wedding-pink': '#F8B5C1',
+				'wedding-lavender': '#E8D5E8',
+				'wedding-rose': '#D94167',
+				'wedding-sage': '#B4C7A9',
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
